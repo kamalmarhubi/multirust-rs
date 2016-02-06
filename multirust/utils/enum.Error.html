@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Error` enum in crate `multirust`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Error">
+
+    <title>multirust::utils::Error - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>multirust</a>::<wbr><a href='index.html'>utils</a></p><script>window.sidebarCurrent = {name: 'Error', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>multirust</a>::<wbr><a href='index.html'>utils</a>::<wbr><a class='enum' href=''>Error</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-414' class='srclink' href='../../rust_install/utils/enum.Error.html?gotosrc=414' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum Error {
+    LocatingHome,
+    pub LocatingWorkingDir {
+        pub error: <a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>Error</a>,
+    },
+    pub ReadingFile {
+        pub name: &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,
+        pub path: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub error: <a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>Error</a>,
+    },
+    pub ReadingDirectory {
+        pub name: &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,
+        pub path: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub error: <a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>Error</a>,
+    },
+    pub WritingFile {
+        pub name: &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,
+        pub path: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub error: <a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>Error</a>,
+    },
+    pub CreatingDirectory {
+        pub name: &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,
+        pub path: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub error: <a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>Error</a>,
+    },
+    pub FilteringFile {
+        pub name: &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,
+        pub src: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub dest: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub error: <a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>Error</a>,
+    },
+    pub RenamingFile {
+        pub name: &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,
+        pub src: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub dest: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub error: <a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>Error</a>,
+    },
+    pub RenamingDirectory {
+        pub name: &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,
+        pub src: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub dest: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub error: <a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>Error</a>,
+    },
+    pub DownloadingFile {
+        pub url: <a class='struct' href='../../url/struct.Url.html' title='url::Url'>Url</a>,
+        pub path: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub error: <a class='enum' href='../../multirust/utils/raw/enum.DownloadError.html' title='multirust::utils::raw::DownloadError'>DownloadError</a>,
+    },
+    pub InvalidUrl {
+        pub url: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    },
+    pub RunningCommand {
+        pub name: <a class='struct' href='https://doc.rust-lang.org/nightly/std/ffi/os_str/struct.OsString.html' title='std::ffi::os_str::OsString'>OsString</a>,
+        pub error: <a class='enum' href='../../multirust/utils/raw/enum.CommandError.html' title='multirust::utils::raw::CommandError'>CommandError</a>,
+    },
+    pub NotAFile {
+        pub path: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+    },
+    pub NotADirectory {
+        pub path: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+    },
+    pub LinkingFile {
+        pub src: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub dest: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub error: <a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>Error</a>,
+    },
+    pub LinkingDirectory {
+        pub src: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub dest: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub error: <a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>Error</a>,
+    },
+    pub CopyingDirectory {
+        pub src: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub dest: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub error: <a class='enum' href='../../multirust/utils/raw/enum.CommandError.html' title='multirust::utils::raw::CommandError'>CommandError</a>,
+    },
+    pub CopyingFile {
+        pub src: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub dest: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub error: <a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>Error</a>,
+    },
+    pub RemovingFile {
+        pub name: &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,
+        pub path: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub error: <a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>Error</a>,
+    },
+    pub RemovingDirectory {
+        pub name: &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,
+        pub path: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub error: <a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>Error</a>,
+    },
+    pub OpeningBrowser {
+        pub error: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>Error</a>&gt;,
+    },
+    pub SettingPermissions {
+        pub path: <a class='struct' href='https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html' title='std::path::PathBuf'>PathBuf</a>,
+        pub error: <a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>Error</a>,
+    },
+}</pre><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.LocatingHome'><code>LocatingHome</code></td><td></td></tr><tr><td id='variant.LocatingWorkingDir'><code>LocatingWorkingDir</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.LocatingWorkingDir.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.ReadingFile'><code>ReadingFile</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.ReadingFile.field.name'><code>name</code></td><td></td></tr><tr><td id='variant.ReadingFile.field.path'><code>path</code></td><td></td></tr><tr><td id='variant.ReadingFile.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.ReadingDirectory'><code>ReadingDirectory</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.ReadingDirectory.field.name'><code>name</code></td><td></td></tr><tr><td id='variant.ReadingDirectory.field.path'><code>path</code></td><td></td></tr><tr><td id='variant.ReadingDirectory.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.WritingFile'><code>WritingFile</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.WritingFile.field.name'><code>name</code></td><td></td></tr><tr><td id='variant.WritingFile.field.path'><code>path</code></td><td></td></tr><tr><td id='variant.WritingFile.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.CreatingDirectory'><code>CreatingDirectory</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.CreatingDirectory.field.name'><code>name</code></td><td></td></tr><tr><td id='variant.CreatingDirectory.field.path'><code>path</code></td><td></td></tr><tr><td id='variant.CreatingDirectory.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.FilteringFile'><code>FilteringFile</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.FilteringFile.field.name'><code>name</code></td><td></td></tr><tr><td id='variant.FilteringFile.field.src'><code>src</code></td><td></td></tr><tr><td id='variant.FilteringFile.field.dest'><code>dest</code></td><td></td></tr><tr><td id='variant.FilteringFile.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.RenamingFile'><code>RenamingFile</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.RenamingFile.field.name'><code>name</code></td><td></td></tr><tr><td id='variant.RenamingFile.field.src'><code>src</code></td><td></td></tr><tr><td id='variant.RenamingFile.field.dest'><code>dest</code></td><td></td></tr><tr><td id='variant.RenamingFile.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.RenamingDirectory'><code>RenamingDirectory</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.RenamingDirectory.field.name'><code>name</code></td><td></td></tr><tr><td id='variant.RenamingDirectory.field.src'><code>src</code></td><td></td></tr><tr><td id='variant.RenamingDirectory.field.dest'><code>dest</code></td><td></td></tr><tr><td id='variant.RenamingDirectory.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.DownloadingFile'><code>DownloadingFile</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.DownloadingFile.field.url'><code>url</code></td><td></td></tr><tr><td id='variant.DownloadingFile.field.path'><code>path</code></td><td></td></tr><tr><td id='variant.DownloadingFile.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.InvalidUrl'><code>InvalidUrl</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.InvalidUrl.field.url'><code>url</code></td><td></td></tr></table></td></tr><tr><td id='variant.RunningCommand'><code>RunningCommand</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.RunningCommand.field.name'><code>name</code></td><td></td></tr><tr><td id='variant.RunningCommand.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.NotAFile'><code>NotAFile</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.NotAFile.field.path'><code>path</code></td><td></td></tr></table></td></tr><tr><td id='variant.NotADirectory'><code>NotADirectory</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.NotADirectory.field.path'><code>path</code></td><td></td></tr></table></td></tr><tr><td id='variant.LinkingFile'><code>LinkingFile</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.LinkingFile.field.src'><code>src</code></td><td></td></tr><tr><td id='variant.LinkingFile.field.dest'><code>dest</code></td><td></td></tr><tr><td id='variant.LinkingFile.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.LinkingDirectory'><code>LinkingDirectory</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.LinkingDirectory.field.src'><code>src</code></td><td></td></tr><tr><td id='variant.LinkingDirectory.field.dest'><code>dest</code></td><td></td></tr><tr><td id='variant.LinkingDirectory.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.CopyingDirectory'><code>CopyingDirectory</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.CopyingDirectory.field.src'><code>src</code></td><td></td></tr><tr><td id='variant.CopyingDirectory.field.dest'><code>dest</code></td><td></td></tr><tr><td id='variant.CopyingDirectory.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.CopyingFile'><code>CopyingFile</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.CopyingFile.field.src'><code>src</code></td><td></td></tr><tr><td id='variant.CopyingFile.field.dest'><code>dest</code></td><td></td></tr><tr><td id='variant.CopyingFile.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.RemovingFile'><code>RemovingFile</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.RemovingFile.field.name'><code>name</code></td><td></td></tr><tr><td id='variant.RemovingFile.field.path'><code>path</code></td><td></td></tr><tr><td id='variant.RemovingFile.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.RemovingDirectory'><code>RemovingDirectory</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.RemovingDirectory.field.name'><code>name</code></td><td></td></tr><tr><td id='variant.RemovingDirectory.field.path'><code>path</code></td><td></td></tr><tr><td id='variant.RemovingDirectory.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.OpeningBrowser'><code>OpeningBrowser</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.OpeningBrowser.field.error'><code>error</code></td><td></td></tr></table></td></tr><tr><td id='variant.SettingPermissions'><code>SettingPermissions</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.SettingPermissions.field.path'><code>path</code></td><td></td></tr><tr><td id='variant.SettingPermissions.field.error'><code>error</code></td><td></td></tr></table></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html' title='core::fmt::Display'>Display</a> for <a class='enum' href='../../multirust/utils/enum.Error.html' title='multirust::utils::Error'>Error</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html#method.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Error.html' title='core::fmt::Error'>Error</a>&gt;</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "multirust";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

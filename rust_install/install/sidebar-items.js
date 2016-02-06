@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["InstallMethod",""],["InstallType",""],["Uninstaller",""]],"fn":[["bin_path",""]],"struct":[["InstallPrefix",""]]});
